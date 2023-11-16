@@ -1,4 +1,4 @@
-package model;
+package com.onetomany.model;
 
 
 import jakarta.persistence.*;

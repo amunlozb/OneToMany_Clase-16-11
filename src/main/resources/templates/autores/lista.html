@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Listado de Autores</title>
 </head>
 <body>
-$END$
+    <h1>Autores</h1>
+    <div th:each="autor : ${autores}">
+        <h2 th:text="${autor.nombre}">Nombre del Autor</h2>
+        <h3>Libros</h3>
+        <ul>
+            <li th:each="libro : ${autor.libros}" th:text="${libro.titulo}">Titulo del Libro</li>
+        </ul>
+    </div>
 </body>
 </html>
